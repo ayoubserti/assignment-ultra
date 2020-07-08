@@ -1,24 +1,29 @@
+/*
+    @author     Ayoub Serti
+    @abstract   testsuite for the first assignement
+*/
+
 #include <iostream>
 #include "add.h"
 #include <assert.h>
 
+
+// add function tester
 template<typename T>
 void test_add(T a, T b )
 {   
-
-    assert(add(a,b)==a+b );
+    assert(add(a,b) == a+b );
 }
 
 
-int main()
+int main( int argc, char** argv)
 {
-
-
+    //manual validation
     {
         int a = -12, b = -18;
         std::cout   << add ( a , b ) << "   " << a+b << std::endl;
     }
-
+    //manual validation
     {
         char a = 12 ,  b = -18;
         std::cout   << (int)add ( a , b ) << "   " << a+b << std::endl; //char is interpreted by (ostream)std::cout as printable character
@@ -60,7 +65,6 @@ int main()
         uint32_t a= std::numeric_limits<uint32_t>::max() , b=std::numeric_limits<uint32_t>::min();
         test_add(a,b);
     }
-
 
     return 0;
 }
