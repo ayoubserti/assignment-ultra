@@ -18,7 +18,7 @@ M: 4, 7 S: 11
 
 # Abstract
 
- It's similar to a `Knapsack problem` with the particularity that all elements has same importance ( weight)
+ It's similar to a `Knapsack problem` with the particularity that all elements has same values. called also value-independante knapsack problem. The sum of weights must be < or = T
  The intuitive and no-optimal solution is to use Greedy algorithm 
  ```
     sort objects in descending order of efficiency
@@ -34,14 +34,32 @@ M: 4, 7 S: 11
     end for
  ```
 
- The optimal way it to use dynamic programming to solve the problem. Bellman algorithm is the way to go.
+ The optimal way it to use dynamic programming to solve the problem. `Backtracking` algorithm is the way to go.
 
+The model used here for dynamic programming: 
+`M` subset of numbers ( weigth )
+`P(i)` number choosed in a state
+`E(i)` state of the system 
+Possible decision from `E(i-1)` 
+  ```
+    if E(i-1) + P(i) > T then
+       - don't choose this number
+    else
+       - don't choose this number
+       - choose this number
+         --> select between the maximum of two paths
+    end if
+  ``` 
 
 # Build
 
 g++ -std=c++11 -o assign main.cc -Werror
 
 # Test
+
+To test the algorithm we provide an input file `test.in` that contains multiple entries. Every entry consist of a number T and a vector I as described in the problem
+We write result found into a `test.out`
+While we don't have another implementation to check again, we only verify that the sum of found subset is equal to `S`.
 
 # Dev environment
 
