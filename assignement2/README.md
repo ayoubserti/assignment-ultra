@@ -34,6 +34,7 @@ M: 4, 7 S: 11
     end for
  ```
 
+ The optimal way it to use dynamic programming to solve the problem. Bellman algorithm is the way to go.
 
 
 # Build
