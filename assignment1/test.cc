@@ -1,6 +1,6 @@
 /*
     @author     Ayoub Serti
-    @abstract   testsuite for the first assignement
+    @abstract   testsuite for the first assignment
 */
 
 #include <iostream>

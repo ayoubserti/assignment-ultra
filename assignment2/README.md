@@ -1,4 +1,4 @@
-# Assignement 2
+# Assignment 2
 
 Given an integer (T) and an integer set (I), find a subset (M) that the sum (S) of M's elements is the largest among all subsets of I. S <= T.
 Signature of the interface : 
@@ -50,16 +50,22 @@ Possible decision from `E(i-1)`
          --> select between the maximum of two paths
     end if
   ``` 
+# Implementation
+
+The whole implmentation reside in function [recursively_sum_subset](./largest_sum.cc#L16)
 
 # Build
 
-g++ -std=c++11 -o assign main.cc -Werror
+```
+g++ -std=c++11 -o test test.cc  largest_sum.cc -Werror
+```
 
 # Test
 
 To test the algorithm we provide an input file `test.in` that contains multiple entries. Every entry consist of a number T and a vector I as described in the problem
 We write result found into a `test.out`
 While we don't have another implementation to check again, we only verify that the sum of found subset is equal to `S`.
+Another test file `big_test.in` for performance. You may want to compile with `-DGENERATE_BIG_TEST` to re-create `big_test.in`.
 
 # Dev environment
 

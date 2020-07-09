@@ -1,4 +1,4 @@
-# Assignement 1
+# Assignment 1
 
 Use bit operator to calculate the sum of two integers, check overflow with bit operator too.
 
@@ -28,18 +28,21 @@ add(T a , T b)
 
 So calls like ```add ( 0.2548 , 152.6552)``` shoud assert in compile-time
 
-*It's a header-only* program. include `add.h` to use it.
+*It's a header-only* program. include [`add.h`](./add.h) to use it.
 
 # Build
 
-g++ -std=c++11 -o c1 main.cc -Werror
+Since it's a header-only, you may build directly test using a c++11 compiler
+```
+g++ -std=c++11 -o test test.cc -Werror
+```
 
 # Test
 
 I provide main.cc as test program, it test some arbitrary values and check if the `add` function does 
 correctly in corner-cases.
 
-The test is based on function `assert()`. Therefore `test_add()`will print error message and abort the program
+The test is based on function `assert()`. Therefore [`test_add()`](./test.cc#L13) will print error message and abort the program
 
 # Dev environment
 
