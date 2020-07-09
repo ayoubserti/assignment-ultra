@@ -16,4 +16,4 @@ jobs:
     - name: make assignment1
       run: g++ -std=c++11 -o test_problem1 assignment1/test.cc  -Werror
     - name: make assignement2
-      run: g++ -std=c++11 -o test_problem2 assignement2/test.cc  assignement2/largest_sum.cc -Werror 
+      run: g++ -std=c++11 -o test_problem2 assignment2/test.cc  assignment2/largest_sum.cc -Werror 
