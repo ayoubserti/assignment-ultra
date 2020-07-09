@@ -37,9 +37,10 @@ M: 4, 7 S: 11
  The optimal way it to use dynamic programming to solve the problem. `Backtracking` algorithm is the way to go.
 
 The model used here for dynamic programming: 
-`M` subset of numbers ( weigth )
-`P(i)` number choosed in a state
-`E(i)` state of the system 
+- `M` subset of numbers ( weigth )
+- `P(i)` number choosed in a state
+- `E(i)` state of the system 
+  
 Possible decision from `E(i-1)` 
   ```
     if E(i-1) + P(i) > T then
